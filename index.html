@@ -145,7 +145,7 @@
                       <p id="biryani_output" style="padding-right: 500px;">0</p>
                     </div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="save-changes-button" data-dismiss="modal" onclick="updateDisplay()">Save changes</button>
+                    <button type="button" class="save-changes-button" data-dismiss="modal">Save changes</button>
                   </div>
                 </div>
               </div>
@@ -958,21 +958,7 @@
     </div>
   </div>
 </div>
-<svg width="100" height="100" style="border-radius: 10px;">
-    <a xlink:href="https://www.example.com/">
-      <circle cx="50" cy="50" r="40" />
-    </a>
-  </svg>
-  <p id="final_bill">rege</p>
 <script>
-  var biryani_final=0
-  var final={"biryani":0,"pizza":0,"burgur":0,"starters":0,"dessert":0,"bread":0,"main course":0,"beverage":0};
-  function updateDisplay(key,value) {
-    final[key]=value;
-    document.getElementById(final_bill).innerHTML=final[key];
-    
-  }
-
   var biryani_dict={"Hyderabadi biryani":0,"Lucknowi biryani":0,"Calcutta biryani":0,"Mughlai biryani":0,"Memoni biryani":0};  
   var biryani_array=["Hyderabadi biryani","Lucknowi biryani","Calcutta biryani","Mughlai biryani","Memoni biryani"];
   var biryani_price=[200,250,200,300,250];
@@ -1000,9 +986,7 @@
       resultArray+= arrayValue * dictionaryValue;
     }
     resultContainer.textContent =resultArray;
-    updateDisplay("biryani",resultContainer);
   }
-  var biryani_bill=resultContainer;
   var pizza_dict={"Detroit pizza":0,"Margherita pizza":0,"Greek pizza":0,"Sicilian pizza":0,"Chicago pizza":0};  
   var pizza_array=["Detroit pizza","Margherita pizza","Greek pizza","Sicilian pizza","Chicago pizza"];
   var pizza_price=[200,200,200,200,200];
