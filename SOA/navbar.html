@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+     
+    <script src="https://kit.fontawesome.com/aefb1082b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar shadow navbar-expand-lg navbar-light bg-white fixed-top  ">
+     
+    <a class="navbar-brand" href="#">
+      <img  class="logo" src="https://www.creativefabrica.com/wp-content/uploads/2020/09/21/Food-Logo-Graphics-5583096-1-580x386.jpg"/>
+    </a>
+    <h3>BAKASURA</h3>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-4">
+        <a class="nav-link active" href="#homeContainer">Home </a>
+        <a class="nav-link active" href="#foodItems" id="navItem1">Food Items</a>
+        <a class="nav-link active" href="#dine-in" id="navItem2">Dine-In</a>
+        <a class="nav-link active" href="final.html" id="navItem3">Sign up</a>
+        <a class="nav-link active" href="#" id="navItem3">login</a>
+        
+      </div>
+    </div>
+  </nav>
+
+  <div id="homeContainer" class="home-container">
+    <div class="text-center">
+      <h1 class="home-heading">Eat Food and Stay Healthy</h1>
+      
+      <a href="#foodItems"><i class="home-view-button fa fa-light fa-circle-arrow-down"></i>
+        </a>
+       
+    </div>
+  </div>
+
+<!--FOOD ITEMS CONTAINER--> 
+<div id="foodItems" class="food-items-data-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mt-5">
+          <h1 class="view-more-heading">Food Items</h1>
+        </div>
+        <!--Biryani's Container-->
+        <div class="col-12 col-md-6 col-lg-3">
+        <div class="shadow food-list-card-container">
+          <img class="food-card-image w-100" src="https://www.licious.in/blog/wp-content/uploads/2023/01/Shutterstock_2047827035.jpg">
+          <h1 class="food-card-heading">Biryani's </h1>
+          
+           <a ><!-- Button trigger modal -->
+            <button type="button" class="food-card-button" data-toggle="modal" data-target="#exampleModal1">
+             <a> View All</a>
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal1" tabindex="-2" >
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title food-title" id="exampleModalLabel">
+                      Biryani's
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="food-items-list-container col-12 mb-4">
+                        <img class="food-item-image" src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/hyderabadi-biryani-with-chicken.jpg">
+                        <div class="ml-4">
+                        <h1 class="food-item-heading">Hyderabadi biryani</h1>
+                        <p class="food-item-text">This is the most popular food in India and is made with a blend of spices, meat, and vegetables.</p>
+                        <p>&#8377;200</p>
+                        <button id="pminus" onclick="biryani_decereasevalue('Hyderabadi biryani')">−</button>
+                        <p id="Hyderabadi biryani" style="display:inline-block"></p>
+                        <button id="pplus" onclick="biryani_increasevalue('Hyderabadi biryani')" style="margin-left: 5px;">+</button>         
+                      </div>
+                      <hr/>
+                      </div>
+                      <div class="food-items-list-container col-12 mb-4">
+                        <img class="food-item-image" src="https://www.indianhealthyrecipes.com/wp-content/uploads/2016/07/awadhi-chicken-biryani-.jpg">
+                        <div class="ml-4">
+                        <h1 class="food-item-heading">Lucknowi biryani</h1>
+                        <p class="food-item-text">Also known as Awadhi food, this type of food is made with spices like cinnamon, anise, and saffron and originates in Northern India.</p>
+                        <p>&#8377;250</p>
+                        <button id="pminus" onclick="biryani_decereasevalue('Lucknowi biryani')">−</button>
+                        <p id="Lucknowi biryani" style="display:inline-block"></p>
+                        <button id="pplus" onclick="biryani_increasevalue('Lucknowi biryani')">+</button>
+                      </div>
+                      <hr/> 
+                      </div>
+                    
+                      <div class="food-items-list-container col-12 mb-4">
+                        <img class="food-item-image" src="http://t2.gstatic.com/images?q=tbn:ANd9GcScwZ2CTgxShd-fwh7ZWGdEa7sFDqbT2h3_eAQu6nNbrZTM-bOn">
+                        <div class="ml-4">
+                        <h1 class="food-item-heading">Calcutta biryani</h1>
+                        <p class="food-item-text">This type of food is made with light yellow rice, yogurt-based chicken, soft-boiled eggs, and potatoes.</p>
+                        <p>&#8377;200</p>
+                        <button id="pminus" onclick="biryani_decereasevalue('Calcutta biryani')">−</button>
+                        <p id="Calcutta biryani" style="display:inline-block"></p>
+                        <button id="pplus" onclick="biryani_increasevalue('Calcutta biryani')">+</button>
+                      </div>
+                      <hr/> 
+                      </div>
+
+                      <div class="food-items-list-container col-12 mb-4">
+                        <img class="food-item-image" src="http://t0.gstatic.com/images?q=tbn:ANd9GcQWn7isMt3woaRbuhgzyJfeq33WxiBHdV-XRqjs46U6lXjOaou8">
+                        <div class="ml-4">
+                        <h1 class="food-item-heading">Mughlai biryani</h1>
+                        <p class="food-item-text">This type of food is made with flavored rice, spiced and browned meat, fried onions, sultanas, and dry fruits.</p>
+                        <p>&#8377;300</p>
+                        <button id="pminus" onclick="biryani_decereasevalue('Mughlai biryani')">−</button>
+                        <p id="Mughlai biryani" style="display:inline-block"></p>
+                        <button id="pplus" onclick="biryani_increasevalue('Mughlai biryani')">+</button> 
+                      </div>
+                      <hr> 
+                      </div>
+
+                      <div class="food-items-list-container col-12 mb-4">
+                        <img class="food-item-image" src="data:image/jpeg;base64,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">
+                        <div class="ml-4">
+                        <h1 class="food-item-heading">Memoni biryani</h1>
+                        <p class="food-item-text">This type of food is made with mutton, dahi, fried onions, and potatoes and has fewer tomatoes than Sindhi food.</p>
+                        <p>&#8377;250</p>
+                        <button id="pminus" onclick="biryani_decereasevalue('Memoni biryani')">−</button>
+                        <p id="Memoni biryani" style="display:inline-block"></p>
+                        <button id="pplus" onclick="biryani_increasevalue('Memoni biryani')">+</button> 
+                      </div>
+                      <hr/> 
+                      </div>
+
+                       
+                  </div>
+                  <div class="modal-footer">
+                    <div id="bill">
+                      <p>Total Bill : &#8377;</p>
+                      <p id="biryani_output" style="padding-right: 500px;">0</p>
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="save-changes-button" data-dismiss="modal" onclick="updateDisplay()">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+        </div>
+        </div>
+
+        <!--Pizza's Container-->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="shadow food-list-card-container">
+            <img class="food-card-image w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvRSYByjQVa3jrpxTUTPxNDBj4BJRHugIGaA&usqp=CAU"/>
+            <h1 class="food-card-heading">Pizza's</h1>
+            
+             <a ><!-- Button trigger modal -->
+              <button type="button" class="food-card-button" data-toggle="modal" data-target="#exampleModal2">
+               <a> View All</a>
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title food-title" id="exampleModalLabel">
+                        Pizza's
+                        
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAZjc_IvGA8MqqE3komjE-KdrxYNw0miBan2YIH8T5Th2Ky7LeojzJ8RS4XuPTPwaz6N8&usqp=CAU">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Detroit pizza</h1>
+                          <p class="food-item-text">Also known as upside-down pizza, this pizza is rectangular and has a chewy dough.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="pizza_decereasevalue('Detroit pizza')">−</button>
+                          <p id="Detroit pizza" style="display:inline-block"></p>
+                          <button id="pplus" onclick="pizza_increasevalue('Detroit pizza')" style="margin-left: 5px;">+</button> 
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Pizza_Margherita_stu_spivack.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Margherita pizza</h1>
+                          <p class="food-item-text">Named after Queen Margherita in the 1880s, this pizza is made with Italian tomato sauce and buffalo mozzarella.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="pizza_decereasevalue('Margherita pizza')">−</button>
+                          <p id="Margherita pizza" style="display:inline-block"></p>
+                          <button id="pplus" onclick="pizza_increasevalue('Margherita pizza')" style="margin-left: 5px;">+</button> 
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://www.cookingclassy.com/wp-content/uploads/2013/10/greek-pizza2+srgb.-450x500.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Greek pizza</h1>
+                          <p class="food-item-text">This style of pizza is made by Greek immigrants who moved to the United States and added their own flair.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="pizza_decereasevalue('Greek pizza')">−</button>
+                          <p id="Greek pizza" style="display:inline-block"></p>
+                          <button id="pplus" onclick="pizza_increasevalue('Greek pizza')" style="margin-left: 5px;">+</button> 
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Sfincione_palermitano.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Sicilian pizza</h1>
+                          <p class="food-item-text">This Sicilian-American dish is based on a Sicilian food called sfinciuni, which is a focaccia-style bread.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="pizza_decereasevalue('Sicilian pizza')">−</button>
+                          <p id="Sicilian pizza" style="display:inline-block"></p>
+                          <button id="pplus" onclick="pizza_increasevalue('Sicilian pizza')" style="margin-left: 5px;">+</button> 
+                        </div>
+                        <hr> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Chicago-Style_Stuffed_Pizza.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Chicago pizza</h1>
+                          <p class="food-item-text">This pizza is made with dough that's often bolstered with cornmeal or semolina, which gives it a robust flavor and texture.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="pizza_decereasevalue('Chicago pizza')">−</button>
+                          <p id="Chicago pizza" style="display:inline-block"></p>
+                          <button id="pplus" onclick="pizza_increasevalue('Chicago pizza')" style="margin-left: 5px;">+</button> 
+                        </div>
+                        <hr/> 
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <div id="bill">
+                        <p>Total Bill : &#8377;</p>
+                        <p id="pizza_output" style="padding-right: 500px;">0</p>
+                      </div>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class=" save-changes-button">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+          </div>
+          </div>
+
+        <!--Burger's Container-->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="shadow food-list-card-container">
+            <img class="food-card-image w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr1ssAMGkWrYLWIMgnhrIqWVNYrfM3ZR7Nmg&usqp=CAU"/>
+            <h1 class="food-card-heading">Burger's</h1>
+            
+             <a ><!-- Button trigger modal -->
+              <button type="button" class="food-card-button" data-toggle="modal" data-target="#exampleModal3">
+               <a> View All</a>
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title food-title" id="exampleModalLabel">
+                        Burger's
+                        
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="data:image/jpeg;base64,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">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Cheese Burger</h1>
+                          <p class="food-item-text">A cheeseburger is a hamburger with a slice of melted cheese on top of the meat patty, added near the end of the cooking time.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="burgur_decereasevalue('Cheese Burger')">−</button>
+                          <p id="Cheese Burger" style="display:inline-block"></p>
+                          <button id="pplus" onclick="burgur_increasevalue('Cheese Burger')" style="margin-left: 5px;">+</button> 
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcDamhcQdw5KEbsHoB2IpfMoJVqtmtf5oh2aw5pCIw&s">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Veggie Burger</h1>
+                          <p class="food-item-text">The best veggie burger recipe! These hearty vegan patties won't fall apart on the grill, and they have a delicious savory flavor and meaty texture.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="burgur_decereasevalue('Veggie Burger')">−</button>
+                          <p id="Veggie Burger" style="display:inline-block"></p>
+                          <button id="pplus" onclick="burgur_increasevalue('Veggie Burger')" style="margin-left: 5px;">+</button> 
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://sallysbakingaddiction.com/wp-content/uploads/2018/07/best-black-bean-burgers-2.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Black bean burger</h1>
+                          <p class="food-item-text">This style of pizza is made by Greek immigrants who moved to the United States and added their own flair.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="burgur_decereasevalue('Black bean burger')">−</button>
+                          <p id="Black bean burger" style="display:inline-block"></p>
+                          <button id="pplus" onclick="burgur_increasevalue('Black bean burger')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWF_26e2-IOO52dYjlKeZPlnuJhxhOZU0T7c9neZe0R0xi-uPSNbJFqY-v8w&s">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Bacon Cheese burger</h1>
+                          <p class="food-item-text">Ingredients · 12 slices sharp cheddar cheese · 15 slices bacon, divided · 2 pounds ground chuck (80/20 lean to fat ratio) · </p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="burgur_decereasevalue('Bacon Cheese burger')">−</button>
+                          <p id="Bacon Cheese burger" style="display:inline-block"></p>
+                          <button id="pplus" onclick="burgur_increasevalue('Bacon Cheese burger')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="data:image/jpeg;base64,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">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Mushroom Burger</h1>
+                          <p class="food-item-text">The next time you need a quick and easy summer dinner, make this grilled portobello mushroom burger recipe!</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="burgur_decereasevalue('Mushroom Burger')">−</button>
+                          <p id="Mushroom Burger" style="display:inline-block"></p>
+                          <button id="pplus" onclick="burgur_increasevalue('Mushroom Burger')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                         
+                    </div>
+                    <div class="modal-footer">
+                      <div id="bill">
+                        <p>Total Bill : &#8377;</p>
+                        <p id="burgur_output" style="padding-right: 500px;">0</p>
+                      </div>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class=" save-changes-button">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+          </div>
+          </div>
+
+        <!--Starter's Container-->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="shadow food-list-card-container">
+            <img class="food-card-image w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXk0AEoxh1ktm40D66KttHRxx2A5anp7u3tw&usqp=CAU"/>
+            <h1 class="food-card-heading">Starter's</h1>
+            
+             <a ><!-- Button trigger modal -->
+              <button type="button" class="food-card-button" data-toggle="modal" data-target="#exampleModal4">
+               <a> View All</a>
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title food-title" id="exampleModalLabel">
+                        Starter's
+                        
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://sulthansbiriyani.in/wp-content/uploads/2021/04/chicken-spring-rolls-Delicious-Indian-Non-Veg-Starters.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Chicken spring rolls</h1>
+                          <p class="food-item-text">Fully cooked spring rolls filled with chicken and vegetables can make your guests relish them.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="starter_decereasevalue('Chicken spring rolls')">−</button>
+                          <p id="Chicken spring rolls" style="display:inline-block"></p>
+                          <button id="pplus" onclick="starter_increasevalue('Chicken spring rolls')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://sulthansbiriyani.in/wp-content/uploads/2021/04/Fish-and-chicken-pakora-Delicious-Indian-Non-Veg-Starters.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Fish and chicken pakora</h1>
+                          <p class="food-item-text">Most people are fish lovers, and having fish pakora at the party can also convince a hesitant guest to taste something new, and a deep-fried crunchy pakora dipped with chutney can be zesty.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="starter_decereasevalue('Fish and chicken pakora')">−</button>
+                          <p id="Fish and chicken pakora" style="display:inline-block"></p>
+                          <button id="pplus" onclick="starter_increasevalue('Fish and chicken pakora')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://sulthansbiriyani.in/wp-content/uploads/2021/04/Chilli-Prawns-Delicious-Indian-Non-Veg-Starters.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Chilli Prawns</h1>
+                          <p class="food-item-text">This remains an all-time favourite starter for seafood lovers. This is a versatile item that can be cooked in various ways and is also known as a hero ingredient in regional cuisines, especially South Indians.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="starter_decereasevalue('Chilli Prawns')">−</button>
+                          <p id="Chilli Prawns" style="display:inline-block"></p>
+                          <button id="pplus" onclick="starter_increasevalue('Chilli Prawns')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://sulthansbiriyani.in/wp-content/uploads/2021/04/Chicken-Manchurian-Delicious-Indian-Non-Veg-Starters.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading"> Chicken Manchurian</h1>
+                          <p class="food-item-text">It is fusion food with Chinese cuisine adapted with some tangy soya sauce to bring out something new. It can be served with noodles, fried rice. </p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="starter_decereasevalue('Chicken Manchurian')">−</button>
+                          <p id="Chicken Manchurian" style="display:inline-block"></p>
+                          <button id="pplus" onclick="starter_increasevalue('Chicken Manchurian')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://sulthansbiriyani.in/wp-content/uploads/2021/04/Crispy-baked-Rangoon-Delicious-Indian-Non-Veg-Starters.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Crispy baked Rangoon</h1>
+                          <p class="food-item-text">It is a new appetizer in town and can be served with sweet or sour sauce, Chinese mustard. Black pork can also be tried along with crispy baked Rangoon.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="starter_decereasevalue('Crispy baked Rangoon')">−</button>
+                          <p id="Crispy baked Rangoon" style="display:inline-block"></p>
+                          <button id="pplus" onclick="starter_increasevalue('Crispy baked Rangoon')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                         
+                    </div>
+                    <div class="modal-footer">
+                      <div id="bill">
+                        <p>Total Bill : &#8377;</p>
+                        <p id="starter_output" style="padding-right: 500px;">0</p>
+                      </div>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class=" save-changes-button">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+          </div>
+          </div>
+
+        <!--Dessert's Container-->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="shadow food-list-card-container">
+            <img class="food-card-image w-100" src="https://snippetsofparis.com/wp-content/uploads/2018/12/IMG_0711-desserts.jpg"/>
+            <h1 class="food-card-heading">Dessert's</h1>
+            
+             <a ><!-- Button trigger modal -->
+              <button type="button" class="food-card-button" data-toggle="modal" data-target="#exampleModal5">
+               <a> View All</a>
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title food-title" id="exampleModalLabel">
+                        Dessert's
+                        
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSAGR_z32pqR6KX8pO021KtUDcZrzhSZW_EpLRZ5D0k1mTthOALP5hhom8Q345nHhCm">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Cheesecake</h1>
+                          <p class="food-item-text">Cheesecake is a dessert made with a soft fresh cheese, eggs, and sugar.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="desert_decereasevalue('Cheesecake')">−</button>
+                          <p id="Cheesecake" style="display:inline-block"></p>
+                          <button id="pplus" onclick="desert_increasevalue('Cheesecake')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://www.southernliving.com/thmb/NkfBDLmXJe9qMub_ERjmmdL2wSQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2654101_Lemon_212-2000-6cec9a7fc34f43e1a7ec933c27b32197.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Apple pie</h1>
+                          <p class="food-item-text">Apple pie · Baked Alaska, ice cream and cake topped with browned meringue.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="desert_decereasevalue('Apple pie')">−</button>
+                          <p id="Apple pie" style="display:inline-block"></p>
+                          <button id="pplus" onclick="desert_increasevalue('Apple pie')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Custard.jpg/1200px-Custard.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Custard</h1>
+                          <p class="food-item-text">Custard is a variety of culinary preparations based on sweetened milk, cheese, or cream cooked with egg or egg yolk to thicken it, and sometimes also flour, corn starch, or gelatin./p>
+                            <p>&#8377;200</p>
+                            <button id="pminus" onclick="desert_decereasevalue('Custard')">−</button>
+                            <p id="Custard" style="display:inline-block"></p>
+                            <button id="pplus" onclick="desert_increasevalue('Custard')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://hips.hearstapps.com/hmg-prod/images/banana-pudding-pops-lead-64874e342dccf.jpg?crop=0.6663961038961039xw:1xh;center,top&resize=980:*">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Banana pudding</h1>
+                          <p class="food-item-text">Banana Pudding Pops. Get the Banana Pudding Pops recipe. </p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="desert_decereasevalue('Banana pudding')">−</button>
+                          <p id="Banana pudding" style="display:inline-block"></p>
+                          <button id="pplus" onclick="desert_increasevalue('Banana pudding')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9ZR4OMYGmqAUjj0fK2knUOxphXYChYtNatOoRAoFgwRH3soJAZBq38Pyn3pyAlCultNU&usqp=CAU">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Ice cream</h1>
+                          <p class="food-item-text">While many desserts are baked and served warm, at room temperature, or refrigerated, there are also a variety of types of frozen desserts such as: Ice cream</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="desert_decereasevalue('Ice cream')">−</button>
+                          <p id="Ice cream" style="display:inline-block"></p>
+                          <button id="pplus" onclick="desert_increasevalue('Ice cream')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                         
+                    </div>
+                    <div class="modal-footer">
+                      <div id="bill">
+                        <p>Total Bill : &#8377;</p>
+                        <p id="desert_output" style="padding-right: 500px;">0</p>
+                      </div>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class=" save-changes-button">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+          </div>
+          </div>
+         
+        <!--Bread's Items Container-->
+        <div class=" col-12col-md-6 col-lg-3">
+          <div class="shadow food-list-card-container">
+            <img class="food-card-image w-100" src="https://imgs.search.brave.com/Z7bxyP_SSMWBH_tx1ZMM4azFhpCWljBTlVYFnlXQs04/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kM2gx/bGcza3N3Nmk2Yi5j/bG91ZGZyb250Lm5l/dC9tZWRpYS9pbWFn/ZS8yMDE3LzEwLzIw/Lzc1MTU2ODEzYjZk/MTQ4MTZiYzg0YTY0/NjFlYTYzZmM1X2lu/ZGlhbl9icmVhZHNf/cGFyYXRoYS5qcGc"/>
+            <h1 class="food-card-heading">Indian Bread's</h1>
+            
+             <a ><!-- Button trigger modal -->
+              <button type="button" class="food-card-button" data-toggle="modal" data-target="#exampleModal6">
+               <a> View All</a>
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title food-title" id="exampleModalLabel">
+                        Indian Bread'
+                        
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://imgs.search.brave.com/HDeNa49H3ZWk93-tiktuaKt1X5nxgG-TnlrEG39tQmM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy80/LzQxL1RhbmRvb3Jp/X1JvdGkuSlBHPzIw/MTUwNjE1MTc0MzE3">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Tandoori Roti</h1>
+                          <p class="food-item-text">It is unleavened bread prepared with whole wheat flour on a tawa or griddle, and it's an integral part of everyday meals.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="bread_decereasevalue('Tandoori Roti')">−</button>
+                          <p id="Tandoori Roti" style="display:inline-block"></p>
+                          <button id="pplus" onclick="bread_increasevalue('Tandoori Roti')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://imgs.search.brave.com/sOYZ97oI_1ix-8ZCWrbjl9RFCTEMdJHnP8QTQtxoj00/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMx/ODgxOTUzNS9waG90/by9pbmRpYW4tbmFh/bi1mbGF0YnJlYWQt/bWFkZS13aXRoLWJ1/dHRlci1hbmQtZGls/bC5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9UzRYQjZRc2lj/Tzd0V3ZidG9mVndy/SVBmVURya0ZRXzct/Mm95TURHRUUyTT0">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Butter Naan</h1>
+                          <p class="food-item-text">Naan is leavened flatbread prepared with all-purpose flour, wheat flour or a combination of both.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="bread_decereasevalue('Butter Naan')">−</button>
+                          <p id="Butter Naan" style="display:inline-block"></p>
+                          <button id="pplus" onclick="bread_increasevalue('Butter Naan')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://imgs.search.brave.com/bzYRFMhbbwfVtcfnfCvdRhYzANHY0XPab4-AqOY2KJU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5zaHV0dGVyc3Rv/Y2suY29tL2ltYWdl/LXBob3RvL2tlcmFs/YS1wYXJvdHRhLXBv/cHVsYXJseS1rbm93/bi1wYXJhdGhhLTI2/MG53LTE2NDE3MDk2/MzkuanBn">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Kerala Parotta</h1>
+                          <p class="food-item-text">Parotta, a popular street food in South India, is a layered flatbread prepared with all-purpose flour</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="bread_decereasevalue('Kerala Parotta')">−</button>
+                          <p id="Kerala Parotta" style="display:inline-block"></p>
+                          <button id="pplus" onclick="bread_increasevalue('Kerala Parotta')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://imgs.search.brave.com/ks0l-pI3DyBppPF_BT-sgPROQRWBN6Nlu9WaA9xDQdE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by90/cmFkaXRpb25hbC1n/cmVlbi1rdXRhYi13/aXRoLXN1bWFraC1y/YXNiZXJyeS1wbGFp/bi15b3VnaHVydC10/b3Atdmlld18xNDE3/OTMtNDIxMS5qcGc_/c2l6ZT02MjYmZXh0/PWpwZw">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Plain Kulcha</h1>
+                          <p class="food-item-text">Kulcha is a mildly leavened bread prepared with all-purpose flour without any yeast, but rather leavened with yogurt and/or baking powder.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="bread_decereasevalue('Plain Kulcha')">−</button>
+                          <p id="Plain Kulcha" style="display:inline-block"></p>
+                          <button id="pplus" onclick="bread_increasevalue('Plain Kulcha')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://imgs.search.brave.com/2wxB7zmquu6tnoDLuU513SxBd854OPRJbvlDx3o0_pc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzYxLzg2Lzkx/LzM2MF9GXzM2MTg2/OTE5NF83SkdtSU9T/ajJpVU5pMEFZb1Zo/VnloS3ZhTjZQa09h/aC5qcGc">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Garlic Naan</h1>
+                          <p class="food-item-text">Garlic naan is Indian leavened flatbread made with wheat flours and spiced with garlic.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="bread_decereasevalue('Garlic Naan')">−</button>
+                          <p id="Garlic Naan" style="display:inline-block"></p>
+                          <button id="pplus" onclick="bread_increasevalue('Garlic Naan')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                         
+                    </div>
+                    <div class="modal-footer">
+                      <div id="bill">
+                        <p>Total Bill : &#8377;</p>
+                        <p id="bread_output" style="padding-right: 500px;">0</p>
+                      </div>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class=" save-changes-button">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+          </div>
+          </div>
+
+        <!--Main-Course Container-->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="shadow food-list-card-container">
+            <img class="food-card-image w-100" src="https://imgs.search.brave.com/PSGU1BfzR_rk0nm3-K5HtWf-HFx38tX8ExV9AI82_c0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/Ymx1ZW9zYS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjAv/MDEvdGhlLWJlc3Qt/dG9wLTEwLWluZGlh/bi1kaXNoZXMuanBn"/>
+            <h1 class="food-card-heading">Main Course</h1>
+            
+             <a ><!-- Button trigger modal -->
+              <button type="button" class="food-card-button" data-toggle="modal" data-target="#exampleModal7">
+               <a> View All</a>
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title food-title" id="exampleModalLabel">
+                        Main Course
+                        
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://imgs.search.brave.com/RB3VlmVT4qq_lvlT9SIOzDF8MCyLhiiqH4tOzfsvQL4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90aGV5/dW1teWRlbGlnaHRz/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAxOS8wNy9oeWRl/cmFiYWRpLWNoaWNr/ZW4tbWFzYWxhLTku/anBn">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Hyderabadi Chicken Masala</h1>
+                          <p class="food-item-text"> Indian main dishes are served with a creamy and spicy curry base. But there are many different cooking methods to cook the curry sauce.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="main_course_decereasevalue('Hyderabadi Chicken Masala')">−</button>
+                          <p id="Hyderabadi Chicken Masala" style="display:inline-block"></p>
+                          <button id="pplus" onclick="main_course_increasevalue('Hyderabadi Chicken Masala')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://imgs.search.brave.com/HQqhwOVnGwSDfEv9Qw50WEOC4ZXqRP6DN48jVclFyhA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4z/LmRpZGV2ZWxvcC5j/b20vcHVibGljL2Nk/bi81MzNfYzEwODdh/ZDhlZDI2ZTU3MTZk/YzQ3NzZjMDA1OTcy/N2MuanBn">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Kadhai Chicken</h1>
+                          <p class="food-item-text">Tender chicken tikka simmered in onion and bell peppers kadhai masala tempered by whole coriander</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="main_course_decereasevalue('Kadhai Chicken')">−</button>
+                          <p id="Kadhai Chicken" style="display:inline-block"></p>
+                          <button id="pplus" onclick="main_course_increasevalue('Kadhai Chicken')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://imgs.search.brave.com/gB8PC2Udnb09ggBZgv8sYZu4X16WAv2wk2hM_svoVZ8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/aG9tZW1ha2Vyam9i/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMy8wMi9NZXRo/aS1tYWxhaS1tdXJn/aC1mZW51Z3JlZWst/Y3JlYW15LWNoaWNr/ZW4tcmVjaXBlLWNs/b3NlLXVwLXBob3Rv/LWltYWdlLWJ5LWhv/bWVtYWtlcmpvYi5j/b21fLTY4M3gxMDI0/LmpwZw">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Chicken Lababdar</h1>
+                          <p class="food-item-text">Tender chicken tikka simmered in cheesy onion and tomato gravy, absolutely oofy and robust</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="main_course_decereasevalue('Chicken Lababdar')">−</button>
+                          <p id="Chicken Lababdar" style="display:inline-block"></p>
+                          <button id="pplus" onclick="main_course_increasevalue('Chicken Lababdar')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://imgs.search.brave.com/1hw9lQvP5QQiIEEjUWiNEoXotgaaaLlZoFpG__Li-LA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yZWNp/cGVzcGxhemEuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIy/LzA4L011dHRvbi1N/YXNhbGEtbWluLTc1/MHg1MDAuanBn">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Hyderabadi Mutton Masala</h1>
+                          <p class="food-item-text">This is a very popular Mutton dish cooked in a true Hyderabadi style. It is cooked in a rich and creamy based gravy. This delicious mutton curry can be relished either with jeera rice.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="main_course_decereasevalue('Hyderabadi Mutton Masala')">−</button>
+                          <p id="Hyderabadi Mutton Masala" style="display:inline-block"></p>
+                          <button id="pplus" onclick="main_course_increasevalue('Hyderabadi Mutton Masala')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://imgs.search.brave.com/KzBPsnsG11mFnjzCgSQqbbO-2dwMHPM1-zRgk_G36JQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/ZWZmb3J0bGVzc2Zv/b2RpZS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjMvMDkv/ZWFzeS1rZWVtYS1j/dXJyeS01LmpwZw">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Kheema Curry</h1>
+                          <p class="food-item-text">Bring the authentic flavours of the Indian highway food right inside your kitchen with this delicious and easy mutton recipe. A dish that is unusually authentic!</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="main_course_decereasevalue('Kheema Curry')">−</button>
+                          <p id="Kheema Curry" style="display:inline-block"></p>
+                          <button id="pplus" onclick="main_course_increasevalue('Kheema Curry')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                         
+                    </div>
+                    <div class="modal-footer">
+                      <div id="bill">
+                        <p>Total Bill : &#8377;</p>
+                        <p id="main_course_output" style="padding-right: 500px;">0</p>
+                      </div>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class=" save-changes-button">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+          </div>
+          </div>
+          
+        <!--Beverage's Container-->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="shadow food-list-card-container">
+            <img class="food-card-image w-100" src="https://static.vecteezy.com/system/resources/thumbnails/022/724/366/small/fresh-fruits-juice-on-amazing-light-background-healthy-beverage-rich-in-vitamins-created-generative-ai-photo.jpeg"/>
+            <h1 class="food-card-heading">Bevarage's</h1>
+            
+             <a ><!-- Button trigger modal -->
+              <button type="button" class="food-card-button" data-toggle="modal" data-target="#exampleModal8">
+               <a> View All</a>
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title food-title" id="exampleModalLabel">
+                        Bevarage's
+                        
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ2xmPJEqDg_qSDDcgxGlODhUm0HjY5MHsjK4p1BspPfUJ48jRo">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Thandai</h1>
+                          <p class="food-item-text"> refreshing summer drink from the North Indian states of Punjab, Rajasthan, and Uttar Pradesh. Thandai was originally used in Ayurveda for medicinal purposes.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="beverage_decereasevalue('Thandai')">−</button>
+                          <p id="Thandai" style="display:inline-block"></p>
+                          <button id="pplus" onclick="beverage_increasevalue('Thandai')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd7aFstBuJvPCeHrGBc-brAkYIdPlQkYHZYkhxo_NeC-qWr7RktxHMKLlrWsXw4wgi6DE&usqp=CAU">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Milkshake</h1>
+                          <p class="food-item-text">A milkshake is a sweet beverage made by blending milk, ice cream, and flavorings or sweeteners such as butterscotch, caramel sauce, chocolate syrup, or fruit syrup into a thick, sweet, cold mixture.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="beverage_decereasevalue('Milkshake')">−</button>
+                          <p id="Milkshake" style="display:inline-block"></p>
+                          <button id="pplus" onclick="beverage_increasevalue('Milkshake')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+                      
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuxCks6SNa65dyZm4KBK1wIkPb_5ihPKJtt_ebiQCSmn8L2VKEFMfb0LaFcNlIGtuz1qw&usqp=CAU">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Mango lassi</h1>
+                          <p class="food-item-text">A drink from Punjab with anti-inflammatory properties that goes well with spicy and savory dishes.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="beverage_decereasevalue('Mango lassi')">−</button>
+                          <p id="Mango lassi" style="display:inline-block"></p>
+                          <button id="pplus" onclick="beverage_increasevalue('Mango lassi')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Darjeeling%2C_India%2C_Darjeeling_tea_in_variety%2C_Black_tea.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Darjeeling tea</h1>
+                          <p class="food-item-text">A famous tea known for its antioxidant qualities and heart health benefits.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="beverage_decereasevalue('Darjeeling tea')">−</button>
+                          <p id="Darjeeling tea" style="display:inline-block"></p>
+                          <button id="pplus" onclick="beverage_increasevalue('Darjeeling tea')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr> 
+                        </div>
+  
+                        <div class="food-items-list-container col-12 mb-4">
+                          <img class="food-item-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Orange_juice_1.jpg/1200px-Orange_juice_1.jpg">
+                          <div class="ml-4">
+                          <h1 class="food-item-heading">Fruit juice</h1>
+                          <p class="food-item-text">This sweet and cold drink is made by squeezing or blending fruits.</p>
+                          <p>&#8377;200</p>
+                          <button id="pminus" onclick="beverage_decereasevalue('Fruit juice')">−</button>
+                          <p id="Fruit juice" style="display:inline-block"></p>
+                          <button id="pplus" onclick="beverage_increasevalue('Fruit juice')" style="margin-left: 5px;">+</button>
+                        </div>
+                        <hr/> 
+                        </div>
+  
+                         
+                    </div>
+                    <div class="modal-footer">
+                      <div id="bill">
+                        <p>Total Bill : &#8377;</p>
+                        <p id="beverage_output" style="padding-right: 500px;">0</p>
+                      </div>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class=" save-changes-button">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+          </div>
+          </div>                  
+</div>
+    </div>
+</div>
+
+<!--Dine-In-->
+<div id="dine-in" class="food-items-data-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mt-5">
+        <h1 class="view-more-heading">Dine-In</h1>
+      </div>
+      <!--Restaurant 1-->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="shadow food-list-card-container">
+          <img class="food-card-image w-100" src="https://content.jdmagicbox.com/comp/bangalore/s1/080pxx80.xx80.130205231440.w7s1/logo/qm0t0vmn27krrelohq49fbxfacycknkw-.jpg">
+          <h1 class="food-card-heading">Meghana Foods</h1>
+          
+           <a ><!-- Button trigger modal -->
+            <button type="button" class="food-card-button" data-toggle="modal" data-target="#exampleModal9">
+             <a> Book</a>
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal9" tabindex="-2" >
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title food-title" id="exampleModalLabel">
+                      Meghana Foods
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="food-items-list-container col-12 mb-4">                      
+                      
+                        <p style="padding-right: 50px;">Which date do u want to book a table</p>
+                        <input type="date" name="datebook" id="bookDateInput" style="margin-right: 300px;">
+                      
+                    <br/>
+                        <p>Number of people</p>
+                        <input type="number" name="quantity" id="booknumber">         
+                      </div>
+                      <hr/>                       
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class=" save-changes-button">Book</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </a>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+<svg width="100" height="100" style="border-radius: 10px;">
+    <a xlink:href="https://www.example.com/">
+      <circle cx="50" cy="50" r="40" />
+    </a>
+  </svg>
+  <p id="final_bill">rege</p>
+<script>
+  var biryani_final=0
+  var final={"biryani":0,"pizza":0,"burgur":0,"starters":0,"dessert":0,"bread":0,"main course":0,"beverage":0};
+  function updateDisplay(key,value) {
+    final[key]=value;
+    document.getElementById(final_bill).innerHTML=final[key];
+    
+  }
+
+  var biryani_dict={"Hyderabadi biryani":0,"Lucknowi biryani":0,"Calcutta biryani":0,"Mughlai biryani":0,"Memoni biryani":0};  
+  var biryani_array=["Hyderabadi biryani","Lucknowi biryani","Calcutta biryani","Mughlai biryani","Memoni biryani"];
+  var biryani_price=[200,250,200,300,250];
+  function biryani_increasevalue(key){
+    biryani_dict[key]+=1;
+    document.getElementById(key).textContent=biryani_dict[key];
+    biryani_multiplyValues();
+  }
+  function biryani_decereasevalue(key){
+    if(biryani_dict[key]!=0){
+      biryani_dict[key]-=1;
+      document.getElementById(key).textContent=biryani_dict[key];
+      biryani_multiplyValues();
+    }
+  }
+  function biryani_multiplyValues() {
+    var resultContainer = document.getElementById('biryani_output');
+    resultContainer.innerHTML = '';
+
+    var resultArray =0;
+    for (var i = 0; i < biryani_price.length; i++) {
+      var arrayValue = biryani_price[i];
+      var dictionaryKey = biryani_array[i];
+      var dictionaryValue = biryani_dict[dictionaryKey];
+      resultArray+= arrayValue * dictionaryValue;
+    }
+    resultContainer.textContent =resultArray;
+    updateDisplay("biryani",resultContainer);
+  }
+  var biryani_bill=resultContainer;
+  var pizza_dict={"Detroit pizza":0,"Margherita pizza":0,"Greek pizza":0,"Sicilian pizza":0,"Chicago pizza":0};  
+  var pizza_array=["Detroit pizza","Margherita pizza","Greek pizza","Sicilian pizza","Chicago pizza"];
+  var pizza_price=[200,200,200,200,200];
+  function pizza_increasevalue(key){
+    pizza_dict[key]+=1;
+    document.getElementById(key).textContent=pizza_dict[key];
+    pizza_multiplyValues();
+  }
+  function pizza_decereasevalue(key){
+    if(pizza_dict[key]!=0){
+      pizza_dict[key]-=1;
+      document.getElementById(key).textContent=pizza_dict[key];
+      pizza_multiplyValues();
+    }
+  }
+  function pizza_multiplyValues() {
+    var resultContainer = document.getElementById('pizza_output');
+    resultContainer.innerHTML = '';
+
+    var resultArray =0;
+    for (var i = 0; i < pizza_price.length; i++) {
+      var arrayValue = pizza_price[i];
+      var dictionaryKey = pizza_array[i];
+      var dictionaryValue = pizza_dict[dictionaryKey];
+      resultArray+= arrayValue * dictionaryValue;
+    }
+    resultContainer.textContent =resultArray;
+  }
+  var burgur_dict={"Cheese Burger":0,"Veggie Burger":0,"Black bean burger":0,"Bacon Cheese burger":0,"Mushroom Burger":0};  
+  var burgur_array=["Cheese Burger","Veggie Burger","Black bean burger","Bacon Cheese burger","Mushroom Burger"];
+  var burgur_price=[200,200,200,200,200];
+  function burgur_increasevalue(key){
+    burgur_dict[key]+=1;
+    document.getElementById(key).textContent=burgur_dict[key];
+    burgur_multiplyValues();
+  }
+  function burgur_decereasevalue(key){
+    if(burgur_dict[key]!=0){
+      burgur_dict[key]-=1;
+      document.getElementById(key).textContent=burgur_dict[key];
+      burgur_multiplyValues();
+    }
+  }
+  function burgur_multiplyValues() {
+    var resultContainer = document.getElementById('burgur_output');
+    resultContainer.innerHTML = '';
+
+    var resultArray =0;
+    for (var i = 0; i < burgur_price.length; i++) {
+      var arrayValue = burgur_price[i];
+      var dictionaryKey = burgur_array[i];
+      var dictionaryValue = burgur_dict[dictionaryKey];
+      resultArray+= arrayValue * dictionaryValue;
+    }
+    resultContainer.textContent =resultArray;
+  }
+  var starter_dict={"Chicken spring rolls":0,"Fish and chicken pakora":0,"Chilli Prawns":0,"Chicken Manchurian":0,"Crispy baked Rangoon":0};  
+  var starter_array=["Chicken spring rolls","Fish and chicken pakora","Chilli Prawns","Chicken Manchurian","Crispy baked Rangoon"];
+  var starter_price=[200,200,200,200,200];
+  function starter_increasevalue(key){
+    starter_dict[key]+=1;
+    document.getElementById(key).textContent=starter_dict[key];
+    starter_multiplyValues();
+  }
+  function starter_decereasevalue(key){
+    if(starter_dict[key]!=0){
+      starter_dict[key]-=1;
+      document.getElementById(key).textContent=starter_dict[key];
+      starter_multiplyValues();
+    }
+  }
+  function starter_multiplyValues() {
+    var resultContainer = document.getElementById('starter_output');
+    resultContainer.innerHTML = '';
+
+    var resultArray =0;
+    for (var i = 0; i < starter_price.length; i++) {
+      var arrayValue = starter_price[i];
+      var dictionaryKey = starter_array[i];
+      var dictionaryValue = starter_dict[dictionaryKey];
+      resultArray+= arrayValue * dictionaryValue;
+    }
+    resultContainer.textContent =resultArray;
+  }
+  var desert_dict={"Cheesecake":0,"Apple pie":0,"Custard":0,"Banana pudding":0,"Ice cream":0};  
+  var desert_array=["Cheesecake","Apple pie","Custard","Banana pudding","Ice cream"];
+  var desert_price=[200,200,200,200,200];
+  function desert_increasevalue(key){
+    desert_dict[key]+=1;
+    document.getElementById(key).textContent=desert_dict[key];
+    desert_multiplyValues();
+  }
+  function desert_decereasevalue(key){
+    if(desert_dict[key]!=0){
+      desert_dict[key]-=1;
+      document.getElementById(key).textContent=desert_dict[key];
+      desert_multiplyValues();
+    }
+  }
+  function desert_multiplyValues() {
+    var resultContainer = document.getElementById('desert_output');
+    resultContainer.innerHTML = '';
+
+    var resultArray =0;
+    for (var i = 0; i < desert_price.length; i++) {
+      var arrayValue = desert_price[i];
+      var dictionaryKey = desert_array[i];
+      var dictionaryValue = desert_dict[dictionaryKey];
+      resultArray+= arrayValue * dictionaryValue;
+    }
+    resultContainer.textContent =resultArray;
+  }
+  var bread_dict={"Tandoori Roti":0,"Butter Naan":0,"Kerala Parotta":0,"Plain Kulcha":0,"Garlic Naan":0};  
+  var bread_array=["Tandoori Roti","Butter Naan","Kerala Parotta","Plain Kulcha","Garlic Naan"];
+  var bread_price=[200,200,200,200,200];
+  function bread_increasevalue(key){
+    bread_dict[key]+=1;
+    document.getElementById(key).textContent=bread_dict[key];
+    bread_multiplyValues();
+  }
+  function bread_decereasevalue(key){
+    if(bread_dict[key]!=0){
+      bread_dict[key]-=1;
+      document.getElementById(key).textContent=bread_dict[key];
+      bread_multiplyValues();
+    }
+  }
+  function bread_multiplyValues() {
+    var resultContainer = document.getElementById('bread_output');
+    resultContainer.innerHTML = '';
+
+    var resultArray =0;
+    for (var i = 0; i < bread_price.length; i++) {
+      var arrayValue = bread_price[i];
+      var dictionaryKey = bread_array[i];
+      var dictionaryValue = bread_dict[dictionaryKey];
+      resultArray+= arrayValue * dictionaryValue;
+    }
+    resultContainer.textContent =resultArray;
+  }
+  var main_course_dict={"Hyderabadi Chicken Masala":0,"Kadhai Chicken":0,"Chicken Lababdar":0,"Hyderabadi Mutton Masala":0,"Kheema Curry":0};  
+  var main_course_array=["Hyderabadi Chicken Masala","Kadhai Chicken","Chicken Lababdar","Hyderabadi Mutton Masala","Kheema Curry"];
+  var main_course_price=[200,200,200,200,200];
+  function main_course_increasevalue(key){
+    main_course_dict[key]+=1;
+    document.getElementById(key).textContent=main_course_dict[key];
+    main_course_multiplyValues();
+  }
+  function main_course_decereasevalue(key){
+    if(main_course_dict[key]!=0){
+      main_course_dict[key]-=1;
+      document.getElementById(key).textContent=main_course_dict[key];
+      main_course_multiplyValues();
+    }
+  }
+  function main_course_multiplyValues() {
+    var resultContainer = document.getElementById('main_course_output');
+    resultContainer.innerHTML = '';
+
+    var resultArray =0;
+    for (var i = 0; i < main_course_price.length; i++) {
+      var arrayValue = main_course_price[i];
+      var dictionaryKey = main_course_array[i];
+      var dictionaryValue = main_course_dict[dictionaryKey];
+      resultArray+= arrayValue * dictionaryValue;
+    }
+    resultContainer.textContent =resultArray;
+  }
+  var beverage_dict={"Thandai":0,"Milkshake":0,"Mango lassi":0,"Darjeeling tea":0,"Fruit juice":0};  
+  var beverage_array=["Thandai","Milkshake","Mango lassi","Darjeeling tea","Fruit juice"];
+  var beverage_price=[200,200,200,200,200];
+  function beverage_increasevalue(key){
+    beverage_dict[key]+=1;
+    document.getElementById(key).textContent=beverage_dict[key];
+    beverage_multiplyValues();
+  }
+  function beverage_decereasevalue(key){
+    if(beverage_dict[key]!=0){
+      beverage_dict[key]-=1;
+      document.getElementById(key).textContent=beverage_dict[key];
+      beverage_multiplyValues();
+    }
+  }
+  function beverage_multiplyValues() {
+    var resultContainer = document.getElementById('beverage_output');
+    resultContainer.innerHTML = '';
+
+    var resultArray =0;
+    for (var i = 0; i < beverage_price.length; i++) {
+      var arrayValue = beverage_price[i];
+      var dictionaryKey = beverage_array[i];
+      var dictionaryValue = beverage_dict[dictionaryKey];
+      resultArray+= arrayValue * dictionaryValue;
+    }
+    resultContainer.textContent =resultArray;
+  }
+</script> 
+</body>
+</html>
