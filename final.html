@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url("https://wallpapercave.com/wp/wp8645438.jpg");
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 5px;
+        }
+
+        input[type="button"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="registrationForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+        <span id="firstNameError" class="error"></span>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+        <span id="lastNameError" class="error"></span>
+
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email">
+        <span id="emailError" class="error"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="text" id="mobileNumber" name="mobileNumber">
+        <span id="mobileNumberError" class="error"></span>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+        <span id="addressError" class="error"></span>
+
+        <input type="button" value="Submit" onclick="validateForm()">
+    </form>
+
+    <script>
+       function validateForm() {
+            
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var mobileNumber = document.getElementById('mobileNumber').value;
+            var address = document.getElementById('address').value;
+
+            
+            document.getElementById('firstNameError').innerHTML = '';
+            document.getElementById('lastNameError').innerHTML = '';
+            document.getElementById('emailError').innerHTML = '';
+            document.getElementById('passwordError').innerHTML = '';
+            document.getElementById('mobileNumberError').innerHTML = '';
+            document.getElementById('addressError').innerHTML = '';
+
+            
+            var valid = true;
+
+            if (!/^[a-zA-Z]{6,}$/.test(firstName)) {
+                document.getElementById('firstNameError').innerHTML = 'Invalid First Name';
+                valid = false;
+            }
+
+            if (lastName === '') {
+                document.getElementById('lastNameError').innerHTML = 'Last Name cannot be empty';
+                valid = false;
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById('emailError').innerHTML = 'Invalid E-mail';
+                valid = false;
+            }
+
+            if (password.length < 6) {
+                document.getElementById('passwordError').innerHTML = 'Password should be at least 6 characters long';
+                valid = false;
+            }
+
+            if (!/^\d{10}$/.test(mobileNumber)) {
+                document.getElementById('mobileNumberError').innerHTML = 'Invalid Mobile Number';
+                valid = false;
+            }
+
+            if (address === '') {
+                document.getElementById('addressError').innerHTML = 'Address cannot be empty';
+                valid = false;
+            }
+
+            
+            if (valid) {
+                document.getElementById('Sign Up Complete').submit();
+            }
+        }
+    </script>
+</body>
+</html>
