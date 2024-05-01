@@ -8,8 +8,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-     
+    <link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
     <script src="https://kit.fontawesome.com/aefb1082b2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
   <nav class="navbar shadow navbar-expand-lg navbar-light bg-white fixed-top  ">
@@ -250,7 +253,7 @@
                         <p id="pizza_output" style="padding-right: 500px;">0</p>
                       </div>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class=" save-changes-button">Save changes</button>
+                      <button type="button" class=" save-changes-button" data-dismiss="modal">Save changes</button>
                     </div>
                   </div>
                 </div>
@@ -357,7 +360,7 @@
                         <p id="burgur_output" style="padding-right: 500px;">0</p>
                       </div>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class=" save-changes-button">Save changes</button>
+                      <button type="button" class=" save-changes-button" data-dismiss="modal">Save changes</button>
                     </div>
                   </div>
                 </div>
@@ -464,7 +467,7 @@
                         <p id="starter_output" style="padding-right: 500px;">0</p>
                       </div>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class=" save-changes-button">Save changes</button>
+                      <button type="button" class=" save-changes-button" data-dismiss="modal">Save changes</button>
                     </div>
                   </div>
                 </div>
@@ -571,7 +574,7 @@
                         <p id="desert_output" style="padding-right: 500px;">0</p>
                       </div>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class=" save-changes-button">Save changes</button>
+                      <button type="button" class=" save-changes-button" data-dismiss="modal">Save changes</button>
                     </div>
                   </div>
                 </div>
@@ -678,7 +681,7 @@
                         <p id="bread_output" style="padding-right: 500px;">0</p>
                       </div>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class=" save-changes-button">Save changes</button>
+                      <button type="button" class=" save-changes-button" data-dismiss="modal">Save changes</button>
                     </div>
                   </div>
                 </div>
@@ -785,7 +788,7 @@
                         <p id="main_course_output" style="padding-right: 500px;">0</p>
                       </div>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class=" save-changes-button">Save changes</button>
+                      <button type="button" class=" save-changes-button" data-dismiss="modal">Save changes</button>
                     </div>
                   </div>
                 </div>
@@ -892,7 +895,7 @@
                         <p id="beverage_output" style="padding-right: 500px;">0</p>
                       </div>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class=" save-changes-button">Save changes</button>
+                      <button type="button" class=" save-changes-button" data-dismiss="modal">Save changes</button>
                     </div>
                   </div>
                 </div>
@@ -947,7 +950,9 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class=" save-changes-button">Book</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popupModal">
+                      BOOK NOW
+                    </button>
                   </div>
                 </div>
               </div>
@@ -957,8 +962,32 @@
         </div>
     </div>
   </div>
+  <div class="modal fade" id="popupModal" tabindex="-1" role="dialog" aria-labelledby="popupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="popupModalLabel">Pop-up Message</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Hello! This is a pop-up message in the middle of the screen with animation.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <script>
+  $('.js-addcart-detail').each(function () {
+			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+			$(this).on('click', function () {
+				swal(nameProduct, "Movie Is Booked !", "success");
+			});
+		});
   var biryani_dict={"Hyderabadi biryani":0,"Lucknowi biryani":0,"Calcutta biryani":0,"Mughlai biryani":0,"Memoni biryani":0};  
   var biryani_array=["Hyderabadi biryani","Lucknowi biryani","Calcutta biryani","Mughlai biryani","Memoni biryani"];
   var biryani_price=[200,250,200,300,250];
